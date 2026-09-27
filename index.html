@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Click Shooter: Neon Hunt</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="hud">
+      <div><span>점수</span><strong id="score">0</strong></div>
+      <div><span>콤보</span><strong id="combo">0x</strong></div>
+      <div><span>레벨</span><strong id="level">1</strong></div>
+      <div><span>시간</span><strong id="time">30</strong></div>
+      <div><span>최고 점수</span><strong id="highScore">0</strong></div>
+    </header>
+
+    <main id="gameArea" class="game-area" aria-label="게임 영역">
+      <section id="startOverlay" class="overlay">
+        <p class="eyebrow">NEON HUNT</p>
+        <h1>Click Shooter</h1>
+        <p>적을 빠르게 클릭하세요.<br />콤보를 유지하면 점수가 배로 올라갑니다!</p>
+        <button id="startBtn">게임 시작</button>
+        <label class="sound-toggle"><input id="soundToggle" type="checkbox" checked /> 효과음 및 음악</label>
+      </section>
+      <section id="gameOverPanel" class="overlay hidden">
+        <p class="eyebrow">MISSION COMPLETE</p>
+        <h2>게임 종료</h2>
+        <p>최종 점수 <strong id="finalScore">0</strong></p>
+        <p id="newRecord" class="record hidden">🏆 신기록!</p>
+        <button id="restartBtn">다시 시작</button>
+      </section>
+    </main>
+    <p id="hint" class="hint">30초 동안 최대한 많은 적을 처치하세요.</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
